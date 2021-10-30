@@ -13,3 +13,50 @@
   font-size: 1.5em;
 }
 
+#galleryList{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(222, 218, 218);
+  padding: 10px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  
+}
+
+#galleryList div{
+  background-color: rgb(161, 169, 186);
+  border-radius: 15px;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  width: 225px;
+  height: 300px;
+}
+.imageProperties{
+  border-radius: 15px;
+  height: 200px;
+  width: 200px;
+  margin: 10px;
+}
+
+.likeButton{
+  width: 175px;
+  height: 25px;
+  background-color: rgb(57, 97, 181);
+  border: none ;
+  border-radius: 5px;
+  color: rgb(216, 213, 213);
+  font-size: 12pt;
+}
+
+.altTextBox{
+  border-radius: 15px;
+  height: 175px;
+  width: auto;
+  margin: 10px;
+  background-color:rgb(184, 192, 210);
+  padding: 10px;
+}
