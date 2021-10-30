@@ -50,11 +50,12 @@
   border-radius: 5px;
   color: rgb(216, 213, 213);
   font-size: 12pt;
+  margin: 0px;
 }
 
 .altTextBox{
   border-radius: 15px;
-  height: 175px;
+  height: 180px;
   width: auto;
   margin: 10px;
   background-color:rgb(184, 192, 210);

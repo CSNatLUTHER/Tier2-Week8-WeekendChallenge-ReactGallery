@@ -9,7 +9,7 @@ function GalleryItem(props) {
   }
 
   const increaseLike = () => {
-    axios.put( '/gallery/like/'+ props.image.id).then( (response)=>{
+    axios.put( '/gallery/like?id='+ props.image.id + "&likes="+(props.image.likes+1)).then( (response)=>{
      props.get()
     }).catch((err)=>{
       alert('PUT Failed');
