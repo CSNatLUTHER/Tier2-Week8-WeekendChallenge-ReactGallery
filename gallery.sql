@@ -1,5 +1,7 @@
--- Database Name: gallery_weekend_challenge
--- DROP TABLE gallery_items;
+
+
+
+-- DATABASE NAME: gallery_weekend_challenge
 
 CREATE TABLE gallery_items (
 	id SERIAL PRIMARY KEY,
@@ -9,7 +11,7 @@ CREATE TABLE gallery_items (
 );
 
 INSERT INTO gallery_items (path, description, likes)
-VALUES ( 'images/pic_one.jpeg', 'My dog Pal... Looking for treats.', 106 ),
+VALUES ( 'images/pic_one.jpeg', 'My dog Pal... Looking for treats.', 56 ),
 	   ( 'images/pic_two.jpeg', 'My wife and I spent her birthday in Hawaii.', 30 ),
        ( 'images/pic_four.jpeg', 'They are best friends.', 12 ),
        ( 'images/pic_five.jpeg', 'Pal LOVES walks at the lake!', 20 ),
