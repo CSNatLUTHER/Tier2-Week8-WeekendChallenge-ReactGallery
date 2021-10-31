@@ -11,7 +11,7 @@ function GalleryItem(props) {
   const deleteConfirm = () => {
     swal({
       title: "Are you sure?",
-      text: "Once deleted, you will not be able to recover this imaginary file!",
+      text: "Once deleted, you will not be able to recover this data!",
       icon: "warning",
       buttons: true,
       dangerMode: true,
@@ -47,7 +47,7 @@ function GalleryItem(props) {
   }
   
     return (
-      <div class="galleryItemDiv">
+      <div className="galleryItemDiv">
         {
             show?
               <div className="imagewrap"><img onClick={ toggleShow } src={props.image.path} alt={props.image.description} className="imageProperties"/><input type="button" className="button1" value="X" onClick={deleteConfirm}/></div>:

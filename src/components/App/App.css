@@ -120,3 +120,10 @@
   color: rgb(233, 234, 235);
   font-size: 8pt;
 }
+
+#addPictureLabel{
+  font-size: 15pt;
+  margin-right: 15px;
+  color: rgb(60, 57, 57);
+
+}
