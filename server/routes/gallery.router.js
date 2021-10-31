@@ -43,4 +43,16 @@ router.post('/', (req, res) => {
         res.sendStatus( 500 );
     })
 }); // END GET Route
+
+router.delete('/', (req, res) => {
+    console.log(req.query);
+    let queryString = `DELETE FROM gallery_items
+                       WHERE id=${req.query.id};`;
+    pool.query( queryString ).then( ( results )=>{
+        res.sendStatus( 201 );
+    }).catch( ( err )=>{
+        console.log( err );
+        res.sendStatus( 500 );
+    })
+}); // END GET Route
 module.exports = router;

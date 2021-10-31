@@ -29,7 +29,7 @@
   
 }
 
-#galleryList div{
+.galleryItemDiv {
   background-color: rgb(161, 169, 186);
   border-radius: 15px;
   margin-bottom: 20px;
@@ -100,4 +100,23 @@
   margin-left: 20px;
   margin-right: 20px;
   margin-top: 5px;
+}
+
+.imagewrap {
+  display:inline-block;
+  position:relative;
+}
+
+.button1 {
+  position:absolute;
+  top:16px;
+  right:16px;
+  border: none;
+  background-color: rgb(165, 135, 130);
+  border-radius: 8px;
+  width: 18px;
+  height: 18px;
+  text-align:left;
+  color: rgb(233, 234, 235);
+  font-size: 8pt;
 }

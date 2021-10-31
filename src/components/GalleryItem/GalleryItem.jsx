@@ -8,6 +8,35 @@ function GalleryItem(props) {
         setShow(!show);
   }
 
+  const deleteConfirm = () => {
+    swal({
+      title: "Are you sure?",
+      text: "Once deleted, you will not be able to recover this imaginary file!",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    })
+    .then((willDelete) => {
+      if (willDelete) {
+        swal("Poof! Your image has been deleted!", {
+          icon: "success",
+        });
+        deleteImage();
+      } else {
+        swal("Your image is safe!");
+      }
+    });
+  }
+
+  const deleteImage = () => {
+    axios.delete( '/gallery?id='+ props.image.id ).then( (response)=>{
+      props.get()
+     }).catch((err)=>{
+       alert('PUT Failed');
+       console.log(err);
+     })
+  }
+
   const increaseLike = () => {
     axios.put( '/gallery/like?id='+ props.image.id + "&likes="+(props.image.likes+1)).then( (response)=>{
      props.get()
@@ -18,10 +47,10 @@ function GalleryItem(props) {
   }
   
     return (
-      <div>
+      <div class="galleryItemDiv">
         {
             show?
-              <img onClick={ toggleShow } src={props.image.path} alt={props.image.description} className="imageProperties"/>:
+              <div class="imagewrap"><img onClick={ toggleShow } src={props.image.path} alt={props.image.description} className="imageProperties"/><input type="button" class="button1" value="X" onClick={deleteConfirm}/></div>:
               <h4 onClick={ toggleShow } className="altTextBox">{props.image.description}</h4>
         }
         <input type="button" value="Like This Photo" onClick={ increaseLike } className="likeButton" />
