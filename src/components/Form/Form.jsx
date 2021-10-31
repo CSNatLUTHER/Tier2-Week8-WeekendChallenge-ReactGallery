@@ -78,7 +78,7 @@ function Form(props) {
         <div>
           <label id="addPictureLabel">Add a Picture:</label>
               <select id="picsSelect" onChange={ (event)=> imageSelect ( event ) }>
-                <option selected disabled>Select an Image </option>
+                <option hidden >Select an Image </option>
                 <option value={0}>Pal on the Bed</option>
                 <option value={1}>Hawaii Bound</option>
                 <option value={2}>Nothing Beats a Ball</option>
