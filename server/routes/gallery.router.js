@@ -9,7 +9,7 @@ const pool = require( '../modules/pool' );
 router.get('/', (req, res) => {
     let queryString = `SELECT * 
                         FROM gallery_items
-                        ORDER BY id`
+                        ORDER BY id DESC`
     pool.query( queryString ).then( ( results )=>{
         res.send( results.rows );
     }).catch( ( err )=>{
@@ -31,4 +31,16 @@ router.put('/like', (req, res) => {
     })
 }); // END GET Route
 
+router.post('/', (req, res) => {
+    console.log(req.body);
+    let queryString = `INSERT INTO "gallery_items" ( "path", "description", "likes")
+    VALUES ($1, $2, $3 );`;
+    let values = [req.body.path, req.body.description, req.body.likes ]
+    pool.query( queryString, values ).then( ( results )=>{
+        res.sendStatus( 201 );
+    }).catch( ( err )=>{
+        console.log( err );
+        res.sendStatus( 500 );
+    })
+}); // END GET Route
 module.exports = router;

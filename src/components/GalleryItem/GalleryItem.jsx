@@ -21,10 +21,10 @@ function GalleryItem(props) {
       <div>
         {
             show?
-              <img onClick={ toggleShow } src={props.image.path} alt={props.image.description} class="imageProperties"/>:
-              <h4 onClick={ toggleShow } class="altTextBox">{props.image.description}</h4>
+              <img onClick={ toggleShow } src={props.image.path} alt={props.image.description} className="imageProperties"/>:
+              <h4 onClick={ toggleShow } className="altTextBox">{props.image.description}</h4>
         }
-        <input type="button" value="Like This Photo" onClick={ increaseLike } class="likeButton" />
+        <input type="button" value="Like This Photo" onClick={ increaseLike } className="likeButton" />
         <h6>Number of Likes: {props.image.likes}</h6>
       </div>
     );

@@ -1,5 +1,6 @@
 import React, {useState, useEffect } from 'react';
 import axios from 'axios';
+import Form from '../Form/Form'
 import GalleryList from '../GalleryList/GalleryList';
 import './App.css';
 
@@ -7,7 +8,6 @@ function App() {
   const[images, setImages ] = useState( [] );
 
   useEffect( ()=>{
-    console.log( 'component loaded' );
     getImages();
   }, []);
 
@@ -25,7 +25,8 @@ function App() {
       <header className="App-header">
         <h1 className="App-title">Gallery of My Life</h1>
       </header>
-      <GalleryList images={images} get={getImages}/>
+      <Form get={getImages}/>
+      <div></div><GalleryList images={images} get={getImages}/>
     </div>
   );
 }

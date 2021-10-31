@@ -15,14 +15,16 @@
 
 #galleryList{
   width: 90%;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
   background-color: rgb(222, 218, 218);
   padding: 10px;
-  border-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-around;
   flex-wrap: wrap;
   
 }
@@ -35,6 +37,23 @@
   width: 225px;
   height: 300px;
 }
+
+#formDiv{
+  width: 90%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(222, 218, 218);
+  padding: 10px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+
 .imageProperties{
   border-radius: 15px;
   height: 200px;
@@ -60,4 +79,25 @@
   margin: 10px;
   background-color:rgb(184, 192, 210);
   padding: 10px;
+}
+#picsSelect{
+  border: none;
+  font-size: 12pt;
+  background-color:rgb(222, 218, 218) ;
+  text-align: left;
+  outline: none;
+
+}
+
+.addPictureButton{
+  width: 125px;
+  height: 25px;
+  background-color: rgb(57, 97, 181);
+  border: none ;
+  border-radius: 5px;
+  color: rgb(249, 242, 242);
+  font-size: 12pt;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 5px;
 }
