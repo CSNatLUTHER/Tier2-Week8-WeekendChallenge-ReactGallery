@@ -50,7 +50,7 @@ function GalleryItem(props) {
       <div class="galleryItemDiv">
         {
             show?
-              <div class="imagewrap"><img onClick={ toggleShow } src={props.image.path} alt={props.image.description} className="imageProperties"/><input type="button" class="button1" value="X" onClick={deleteConfirm}/></div>:
+              <div className="imagewrap"><img onClick={ toggleShow } src={props.image.path} alt={props.image.description} className="imageProperties"/><input type="button" className="button1" value="X" onClick={deleteConfirm}/></div>:
               <h4 onClick={ toggleShow } className="altTextBox">{props.image.description}</h4>
         }
         <input type="button" value="Like This Photo" onClick={ increaseLike } className="likeButton" />
